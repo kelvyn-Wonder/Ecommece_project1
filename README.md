@@ -1,1 +1,1 @@
-My Ecommerce website
+My Ecommerce website. Project 2
