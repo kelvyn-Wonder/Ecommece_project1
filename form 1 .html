@@ -7,25 +7,54 @@
   <link rel="stylesheet" href="form1.css">
 </head>
 <body>
+  <!-- Preloader -->
+  <div id="preloader" class="preloader">
+    <div class="spinner"></div>
+</div>
+
   <div class="login">
     <form>
-<h1>PLACE ORDER</h1>
-<label>Name </label>
-<input type="name" name="text" required>
-<label>Tel Number</label>
-<input type="number" name="number" required>
-<label>Location</label>
-<input type="location" name="location" required>
-<label>Product Name</label>
-<input type="name" name="fname" required>
-<label>Quantity</label>
-<input type="number" name="number" required>
-<div class="note">
-  <input type="note" name="cnote" placeholder=" Add Note to your Order">
-</div>
-<button>Submit</button>
+      <h1>PLACE ORDER</h1>
+      <label>Name</label>
+      <input type="text" name="name" required>
+      
+      <label>Tel Number</label>
+      <input type="tel" name="tel" required>
+      
+      <label>Location</label>
+      <input type="text" name="location" required>
+      
+      <label>Product Name</label>
+      <input type="text" name="product_name" required>
+      
+      <label>Quantity</label>
+      <input type="number" name="quantity" required>
+      
+      <label>Upload Image</label>
+      <input type="file" name="image" accept="image/*">
+      
+      <div class="note">
+        <input type="text" name="cnote" placeholder="Add Note to your Order">
+      </div>
+      
+      <button type="submit">Submit</button>
     </form>
   </div>
-  
+
+
+  <script>
+    window.addEventListener('load', function() {
+const preloader = document.getElementById('preloader');
+const content = document.getElementById('content');
+
+// Fade out preloader after the page is loaded
+setTimeout(() => {
+    preloader.style.display = 'none';
+    content.classList.remove('hidden');
+}, 1000);  // Adjust the timeout to control the duration of the preloader
+});
+
+</script>
+
 </body>
 </html>

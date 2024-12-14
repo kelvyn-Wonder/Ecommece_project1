@@ -1,79 +1,110 @@
-*{
-    padding: 0;
-    border: 0;
-}
-.login{
-    border: 1px solid;
-    width: 400px;
-    height: 500px;
-    background: url(background.jpg);
-    color: white;
-    border-radius: 20px;
-    align-items: center;
-    box-shadow: 0px 0px 20px rgba(0px, 0px, 0px, 75);
-    background-size: cover;
-    overflow: hidden;
-    margin-left: 50px;
-    margin-left: 500PX;
 
+/* Preloader Styles */
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
 }
-h1{
-    align-items: center;
-    margin-bottom:20px;
-    font-weight: normal;
-    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0,5);
-    margin-left: 50px;
-    text-transform: capitalize;
 
+.spinner {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #009688;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
 }
-form{
-    display: block;
-    box-sizing: border-box;
-    padding: 40px;
-    width: 100%;
-    height: 100%;
-    backdrop-filter: brightness(40%);
-    flex-direction: column;
-    display: flex;
-    gap: 5px;
-    position: relative;
 
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
 
+/* Curtain Opening Animation for Content */
+#content {
+  overflow: hidden;
+  transform: translateY(-100%);
+  animation: openCurtains 1s ease-out forwards;
 }
-label{
-    font-size: 20px;
-    color: rgba(255, 255, 255, 0.5);
-text-transform: capitalize;
-padding-left: 10px;
-letter-spacing: 2px;
-}
-input{
-    background: rgb(255, 255, 255, 0.5 );
-    height: 40px;
-    border-radius: 50px;
-    padding: 0px 20px;
-    line-height: 20px;
-    margin: 0px ;
-    border: none;
-    color: white;
 
-    
+/* Curtain Animation Keyframes */
+@keyframes openCurtains {
+  0% {
+      transform: translateY(-100%);
+  }
+  100% {
+      transform: translateY(0);
+  }
 }
-button{
-    background-color: green;
-    height: 40px;
-    line-height: 40px;
-    border-radius: 20px;
-    margin-top: 20px;
-    border: none;
-    box-shadow: rgb(0, 0, 0, 0.3);
-    font-size: 12px;
-    color: white;
-    text-transform: uppercase;
 
 
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
 }
-.note{
-    margin-left: 50px;
-    margin-top: 20px;
+
+.login {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 10px;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="number"],
+input[type="file"],
+input[type="note"],
+button {
+  margin-top: 5px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+button {
+  background-color: rgb(179, 17, 44);
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 600px) {
+  .login {
+    padding: 15px;
+  }
+
+  button {
+    padding: 8px;
+  }
 }

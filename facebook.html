@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="facebook.css">
 </head>
 <body>
+
+  <!-- Preloader -->
+  <div id="preloader" class="preloader">
+    <div class="spinner"></div>
+</div>
+
     <div class="container flex">
         <div class="Facebook-page flex">
             <div class="text">
@@ -34,5 +40,21 @@
 
 </div>
 </div>
+
+<script>
+    window.addEventListener('load', function() {
+const preloader = document.getElementById('preloader');
+const content = document.getElementById('content');
+
+// Fade out preloader after the page is loaded
+setTimeout(() => {
+    preloader.style.display = 'none';
+    content.classList.remove('hidden');
+}, 1000);  // Adjust the timeout to control the duration of the preloader
+});
+
+</script>
+
+
 </body>
 </html>

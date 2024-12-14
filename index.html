@@ -7,39 +7,61 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navbar Section -->
-    <header class="navbar">
-        <div class="logo">
-            <img src="logo__1_-removebg-preview.png" alt="AB Beauty Corner Logo">
-        </div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="form 1 .html">Order</a></li>
-                <li><a href="form 1 .html">Contact</a></li>
-                <li><a href="See more.html">More</a></li>
-            </ul>
-            <div class="menu-toggle" id="menu-toggle" onclick="toggleMenu()">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
-        </nav>
-    </header>
+    <!-- Preloader -->
+    <div id="preloader" class="preloader">
+        <div class="spinner"></div>
+    </div>
 
-    <!-- Banner Section with Background Image and Shadow -->
-    <section class="banner">
-        <div class="banner-overlay">
-            <div class="banner-content">
-                <h1>WELCOME TO AB BEAUTY CORNER</h1>
-                <p>LET YOUR BEAUTY SPEAK, LET BEAUTY DO THE TALKING! <br> We are your plug for all your cosmetics needs.</p>
-                <div class="cta-buttons">
-                    <a href="home.html" class="cta-btn">OUR SERVICE</a>
-                    <a href="facebook.html" class="cta-btn">jOIN OUR FACEBOOK PLATFORM</a>
+    <!-- Main Content Wrapper -->
+    <div id="content" class="hidden">
+        <!-- Navbar Section -->
+        <header class="navbar">
+            <div class="logo">
+                <img src="logo__1_-removebg-preview.png" alt="AB Beauty Corner Logo">
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="home.html">Services</a></li>
+                    <li><a href="form 1 .html">Order</a></li>
+                    <li><a href="See more.html">More</a></li>
+                </ul>
+                <div class="menu-toggle" id="menu-toggle" onclick="toggleMenu()">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Banner Section with Background Image and Shadow -->
+        <section class="banner">
+            <div class="banner-overlay">
+                <div class="banner-content">
+                    <h1>WELCOME TO AB BEAUTY CORNER</h1>
+                    <p>LET YOUR BEAUTY SPEAK, LET BEAUTY DO THE TALKING! <br> We are your plug for all your cosmetics needs.</p>
+                    <div class="cta-buttons">
+                        <a href="home.html" class="cta-btn">OUR SERVICE</a>
+                        <a href="facebook.html" class="cta-btn">JOIN OUR FACEBOOK PLATFORM</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
+
+    <script>
+        window.addEventListener('load', function() {
+    const preloader = document.getElementById('preloader');
+    const content = document.getElementById('content');
+    
+    // Fade out preloader after the page is loaded
+    setTimeout(() => {
+        preloader.style.display = 'none';
+        content.classList.remove('hidden');
+    }, 1000);  // Adjust the timeout to control the duration of the preloader
+});
+
+    </script>
 
     <script src="script.js"></script>
 </body>

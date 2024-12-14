@@ -15,8 +15,11 @@ href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 
 </head>
 <body>
-   
-    
+
+<!-- Preloader -->
+<div id="preloader" class="preloader">
+    <div class="spinner"></div>
+</div>    
      <!-- Navigation bar start -->
 <nav>
     <div id="navbar">
@@ -31,10 +34,10 @@ href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
       </div>
       <div id="navbar-links">
         <ul>
-          <li><a href="Home.html">Home</a></li>
-          <li><a href="See more.html">Services</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="form 1 .html">Contact</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#trending">Services</a></li>
+          <li><a href="form 1 .html">Order</a></li>
+          <li><a href="See more.html">More</a></li>
         </ul>
         <div class="collection-tools" id="navbar-tools">
           <a class="cart-link" href="#">
@@ -60,9 +63,9 @@ href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <div id="menu-page-wrapper">
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="service.html">Services</a></li>
-        <li><a href="About us.html">About</a></li>
-        <li><a href="Contact.html">Contact</a></li>
+          <li><a href="home.html">Services</a></li>
+          <li><a href="form 1 .html">Order</a></li>
+          <li><a href="See more.html">More</a></li>
         <li class="collection-tools" id="menu-tools">
           <a class="cart-link" href="#">
             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
@@ -79,9 +82,9 @@ href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
         </li>
       </ul>
   
-      <button class="pink-button">
+      <a href="form 1 .html"><button class="pink-button">
         shop Now
-      </button>
+      </button></a>
     </div>
   </div>
   <!-- End of Menu Bar -->
@@ -353,7 +356,7 @@ href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     </div>
 </section>
 
-
+<!--Footer Section-->
 <section class="contact">
     <div class="contact-info">
         <div class="first-info">
@@ -405,11 +408,25 @@ href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     </div>
 </section>
 
-
-
 <div class="end-text">
     <p>copyright  @2024. StriveDevs</p>
 </div>
+
+
+
+<script>
+    window.addEventListener('load', function() {
+const preloader = document.getElementById('preloader');
+const content = document.getElementById('content');
+
+// Fade out preloader after the page is loaded
+setTimeout(() => {
+    preloader.style.display = 'none';
+    content.classList.remove('hidden');
+}, 1000);  // Adjust the timeout to control the duration of the preloader
+});
+
+</script>
  <script src="script.js"></script>
 </body>
 </html>

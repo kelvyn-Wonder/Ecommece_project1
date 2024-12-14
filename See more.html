@@ -9,7 +9,13 @@
 
 <body>
     
-    <div>
+      <!-- Preloader -->
+      <div id="preloader" class="preloader">
+        <div class="spinner"></div>
+    </div>
+
+    <!--Galary start-->
+    <div class="image-container">
         <img src="images/wig 4.jpeg" alt="">
         <img src="images/BLUNT wig.jpeg" alt="">
         <img src="images/jordan 1.jpeg" alt="">
@@ -24,12 +30,20 @@
         <img src="images/Leather Shoes.jpeg" alt="">
     </div>
 
-    <div class="spinner"></div>
+  
+    <script>
+        window.addEventListener('load', function() {
+    const preloader = document.getElementById('preloader');
+    const content = document.getElementById('content');
     
-    </div id="container">
-    <div id="main">
-        <a href="form 1 .html"><button style=" color: pink; margin-top: 50px; font-size: 30px; background-color: green; cursor: pointer; border-radius: 50px; ">place Your Order</button>
-    </div>
+    // Fade out preloader after the page is loaded
+    setTimeout(() => {
+        preloader.style.display = 'none';
+        content.classList.remove('hidden');
+    }, 1000);  // Adjust the timeout to control the duration of the preloader
+});
+
+    </script>
 
 </body>
 </html>
