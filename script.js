@@ -57,3 +57,10 @@ ScrollReveal().reveal(".main-text",{
   ...scrollRevealOpton,
   origin:"left",
  });
+
+
+ // Function to toggle the menu for mobile screens for the home page
+function toggleMenu() {
+  const menu = document.querySelector('.nav-links');
+  menu.classList.toggle('show');
+}
