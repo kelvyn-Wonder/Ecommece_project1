@@ -73,7 +73,7 @@
   }
   
  
-  #menu-bar {
+  #menu-bar{
     display: none;
     color: var(--black);
     width: 40px;
@@ -118,7 +118,7 @@
     font-size: 20px;
     font-weight: 500;
   }
-  
+
  #navbar-tools {
     display: flex;
     flex-direction: row;
@@ -152,6 +152,17 @@
     right: 10px;
   
   }
+
+.pink-button{
+    padding: 10px;
+    background-color: rgb(179, 17, 44);
+    font-size: 20px;
+    color: var(--white);
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+}
+
  
   @media (max-width: 768px) {
     #menu-bar {
@@ -162,6 +173,13 @@
     #navbar-links {
       display: none;
     }
+
+.collection-tools span{
+    position: relative;
+    bottom: 4rem;
+    left: 19rem;
+
+}
   }
   
 
